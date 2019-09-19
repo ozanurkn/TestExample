@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DatabindingExample" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/MVVM-livedata_room_recyclerview" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mvvm_databinding_retrofit_observable" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mvvm_livedata" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mvvm_livedata_dagger2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mvvm_livedata_databinding_barista_junit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mvvm_livedata_repository_retrofit_recyclerview" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mvvm_livedata_repostroy_recyclerview_exemple1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mvvm_rx2_databinding_mochito_junit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/wpnExample/LocalVPN" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/wpnExample/ShadowVPNAndroid" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/wpnExample/ShadowVPNAndroid/jni/ShadowVPN" vcs="Git" />
+  </component>
+</project>
