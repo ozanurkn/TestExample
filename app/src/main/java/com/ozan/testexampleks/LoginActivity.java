@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.ozan.testexampleks.helper.UserInfoUtil;
+import com.ozan.testexampleks.helper.Utils;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -19,12 +20,13 @@ public class LoginActivity extends AppCompatActivity {
     private EditText password;
     private Button login;
     private ImageView imageView;
+    Utils utils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        utils = new Utils();
         initLogin();
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,33 +44,33 @@ public class LoginActivity extends AppCompatActivity {
         imageView = findViewById(R.id.errorImageView);
     }
 
-    public void manageLogin(String username,String password){
-        if ((TextUtils.isEmpty(username) || TextUtils.isEmpty(password)))
-        {
+    public void manageLogin(String username, String password) {
+        if ((TextUtils.isEmpty(username) || TextUtils.isEmpty(password))) {
             showErrorIcon();
-        }
-        else
-        {
-            if (username.equals(UserInfoUtil.EXAMPLE_USER_NAME) && password.equals(UserInfoUtil.EXAMPLE_USER_PASSWORD))
-            {
-                loginSuccess();
-            }
-            else
-            {
+        } else {
+            if (utils.checkUserNameValidate(UserInfoUtil.EXAMPLE_USER_NAME) && utils.checkPasswordValidate(password)) {
+
+                if (username.equals(UserInfoUtil.EXAMPLE_USER_NAME) && password.equals(UserInfoUtil.EXAMPLE_USER_PASSWORD)) {
+                    loginSuccess();
+                } else {
+                    loginFail();
+                }
+            } else {
                 loginFail();
             }
+
         }
     }
 
-    public void loginSuccess(){
-        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+    public void loginSuccess() {
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 
-    public void loginFail(){
+    public void loginFail() {
         Toast.makeText(this, "HATALI GİRİŞ", Toast.LENGTH_SHORT).show();
     }
 
-    public void showErrorIcon(){
+    public void showErrorIcon() {
         imageView.setVisibility(View.VISIBLE);
     }
 }
